@@ -40,3 +40,12 @@ SELECT birth_date FROM employee ORDER BY birth_date ASC
 SELECT employee_id FROM employee WHERE first_name LIKE 'Nancy'
 SELECT * FROM employee WHERE reports_to = 2
 SELECT COUNT(*) FROM employee WHERE city LIKE 'Lethbridge'
+
+SELECT COUNT(*) FROM invoice WHERE billing_country = 'USA'
+SELECT MAX(total) FROM invoice
+SELECT MIN(total) FROM invoice
+SELECT * FROM invoice WHERE total > 5
+SELECT COUNT(*) FROM invoice WHERE total < 5
+SELECT COUNT(billing_state) FROM invoice WHERE billing_state IN ('CA', 'TX', 'AZ')
+SELECT AVG(total) FROM invoice 
+SELECT SUM(total) FROM invoice

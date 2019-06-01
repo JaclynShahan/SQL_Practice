@@ -49,3 +49,22 @@ SELECT COUNT(*) FROM invoice WHERE total < 5
 SELECT COUNT(billing_state) FROM invoice WHERE billing_state IN ('CA', 'TX', 'AZ')
 SELECT AVG(total) FROM invoice 
 SELECT SUM(total) FROM invoice
+
+SELECT * FROM artist
+SELECT first_name, last_name, country FROM employee
+SELECT name, composer, milliseconds FROM track WHERE milliseconds > 299000
+SELECT COUNT(*) FROM track WHERE milliseconds > 299000
+SELECT AVG(milliseconds) FROM track
+SELECT COUNT(*) FROM invoice WHERE billing_country = 'USA'
+SELECT * FROM customer WHERE first_name LIKE '%a%'
+SELECT * FROM track ORDER BY milliseconds ASC LIMIT 10
+SELECT * FROM track ORDER BY milliseconds DESC LIMIT 20
+SELECT * FROM customer WHERE state IN ('CA', 'WA')
+SELECT * FROM customer WHERE state IN ('CA', 'WA', 'UT', 'FL', 'AZ')
+INSERT INTO artist (name)
+VALUES ('Julia')
+SELECT * FROM artist WHERE name = 'Julia'
+INSERT INTO customer (first_name, last_name, company, address, city, state, country, postal_code, phone, fax, email)
+VALUES ('Jaclyn', 'Shahan', 'Geico', '3901 Happy Street', 'Plano', 'TX', 'USA', '75023', '224-234-3241', '104-245-2418', 'helloworld@gmail.com')
+SELECT * FROM customer WHERE first_name = 'Jaclyn'
+SELECT * FROM playlist WHERE name LIKE 'Classical%'

@@ -33,3 +33,10 @@ SELECT name FROM artist ORDER BY name ASC LIMIT 10
 SELECT * FROM artist ORDER BY name ASC LIMIT 5
 SELECT * FROM artist WHERE name LIKE 'Black%'
 SELECT * FROM artist WHERE name LIKE '%Black%'
+
+SELECT first_name, last_name FROM employee WHERE city LIKE 'Calgary'
+SELECT birth_date FROM employee ORDER BY birth_date DESC
+SELECT birth_date FROM employee ORDER BY birth_date ASC
+SELECT employee_id FROM employee WHERE first_name LIKE 'Nancy'
+SELECT * FROM employee WHERE reports_to = 2
+SELECT COUNT(*) FROM employee WHERE city LIKE 'Lethbridge'

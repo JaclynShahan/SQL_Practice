@@ -26,3 +26,10 @@ SELECT * FROM Person WHERE favorite_color = 'Orange' OR favorite_color = 'green'
 SELECT favorite_color FROM Person WHERE favorite_color IN ('Orange', 'green', 'Blue')
 SELECT favorite_color FROM Person WHERE favorite_color IN ('yellow', 'purple')
 SELECT * from Person WHERE favorite_color LIKE '%range'
+
+INSERT INTO artist (name)
+VALUES ('Luca'), ('Dante'), ('Maximus')
+SELECT name FROM artist ORDER BY name ASC LIMIT 10
+SELECT * FROM artist ORDER BY name ASC LIMIT 5
+SELECT * FROM artist WHERE name LIKE 'Black%'
+SELECT * FROM artist WHERE name LIKE '%Black%'
